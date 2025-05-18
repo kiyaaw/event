@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        background-color: white;
+        width: 20%;
+        font-family: Arial, Helvetica, sans-serif;
+        margin : 0 auto;
+        box-sizing: border-box;
+        box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    .card img {
+        height: 200px;
+        width: 270px;
+    }
+
+    .card .header{
+        width: 100%;
+        height: 200px;
+        background-image: url("./image-header.jpg");
+        background-size: cover;
+    }
+
+    .card .display {
+        width: 100%;
+        display:  flex;
+        justify-content: center;
+        text-align: center;
+        gap : 30px;
+    }
+
+    .card h1 {
+        text-align: center;
+    }
+
+    .card .container-button{
+        display: flex;
+        justify-content: center;
+        /* gap : 10px; */
+    }
+
+    .card .container-button button {
+        flex : 1;
+        border: none;
+        padding : 20px;
+        border-radius: 0;
+    }
+
+    .card .container-button button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .card .container-button button:nth-child(1) {
+        background-color: lightblue;
+    }
+
+    .card .container-button button:nth-child(2) {
+        background-color: lightgreen;
+    }
+
+    .card .container-button button:nth-child(3) {
+        background-color: lightcoral;
+    }
+</style>
+<body>
+    <div class="card">
+    <div class="header">
+      <img src="football.png">
+    </div>
+
+    <div class="display">
+      <div>
+        <h3 id="teamA" onclick="ubahtext()">TEAM A</h3>
+        <h4 id="p1display">0</h4>
+      </div>
+      <div>
+        <h3 class="teamB" onclick="chaging()">TEAM B</h3>
+        <h4 id="p2display">0</h4>
+      </div>
+    </div>
+
+    <div class="container-button">
+      <button onclick="addScore()">+ P1</button>
+      <button onclick="addScorep2()">+ P2</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
