@@ -12,7 +12,7 @@ function addScore (){
     if (totalscorep1 == maxscore) {
         player1display.style.color = "green";
         player2display.style.color = "red";
-
+        document.getElementById("text").innerText = "tim a menang";
     }
 }
 
@@ -27,9 +27,8 @@ function addScorep2 (){
     
     if (totalscorep2 == maxscore) {
         player1display.style.color = "red";
-
         player2display.style.color = "green";
-
+        document.getElementById("text").innerText = "tim b menang";
     }
 }
 
@@ -37,12 +36,22 @@ function ubahtext (){
     const text = document.getElementById("teamA");
     let newtext = prompt ("masukkan text baru:");
 
-    let newesttext = text.innerText = newtext;
+    text.innerText = newtext;
 }
 
-function changing (){
-    const textt = document.getElementById("teamB");
-    let newtextt = prompt ("masukkan text baru:");
+function chaging(){
+    const text2 = document.getElementById("teamB");
+    let textbaru = prompt ("masukkan text baru:");
+    
+    text2.innerText = textbaru; 
+}
 
-    let newesttextt = textt.innerText = newtextt;
+function reset(){
+    p1display.innerText = 0;
+    p1display.style.color = "black";
+
+    p2display.innerText = 0;
+    p2display.style.color = "black";
+
+    document.getElementById("text").innerText = "";
 }
